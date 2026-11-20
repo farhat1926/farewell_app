@@ -1,0 +1,5 @@
+import { useEffect,useState } from 'react';
+import { event } from '../data/event';
+import Reveal from './Reveal';
+const calculate=()=>{const diff=Math.max(0,new Date(event.dateISO).getTime()-Date.now());return {days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000),ended:diff===0};};
+export default function Countdown(){const [time,setTime]=useState(calculate);useEffect(()=>{let timer=setInterval(()=>setTime(calculate()),1000);return()=>clearInterval(timer)},[]);return <section className="section countdown"><Reveal><p className="eyebrow">// COUNTDOWN PROTOCOL</p><h2 className="section-title">UNTIL WE <em>MEET.</em></h2><div className="count-grid">{Object.entries({DAYS:time.days,HOURS:time.hours,MINUTES:time.minutes,SECONDS:time.seconds}).map(([label,value])=><div className="count-card" key={label}><strong>{String(value).padStart(2,'0')}</strong><span>{label}</span></div>)}</div>{time.ended&&<p className="section-lead">Waktunya telah tiba. Sampai bertemu!</p>}</Reveal></section>}
