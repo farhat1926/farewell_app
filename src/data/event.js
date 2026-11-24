@@ -7,9 +7,9 @@ export const event = {
   honoree: "Untuk rekan dan sahabat tercinta",
   greeting:
     "Sebelum melangkah ke cerita yang baru, mari duduk semeja, berbagi tawa, dan merayakan semua kenangan yang telah kita ciptakan bersama.",
-  dateISO: "2026-11-25T17:00:00+07:00", // format: YYYY-MM-DDTHH:mm:ss+07:00
+  dateISO: "2026-11-25T18:00:00+07:00", // format: YYYY-MM-DDTHH:mm:ss+07:00
   dateLabel: "Rabu, 25 November 2026",
-  timeLabel: "17.00 WIB – selesai",
+  timeLabel: "18.00 WIB – selesai",
   place: "Pawon Ayu",
   address:
     "Mangkuyudan, Ngabeyan, Kartasura, Sukoharjo Regency, Central Java 57165",
